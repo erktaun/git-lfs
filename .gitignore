@@ -5,3 +5,10 @@ venv/
 function_source.zip
 .tf_*
 .terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Log files
+*.log

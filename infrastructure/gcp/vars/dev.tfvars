@@ -1,5 +1,6 @@
-region      = "us-central1"
+project     = "project"
+region      = "europe-west4"
 environment = "dev"
-name        = "git-lfs"
-bucket_name = "git-lfs-storagebucket-mo410x249ybo"
-labels      = { "environment" : "develop", "product" : "git_lfs", "owner" : "vitaliy_boyarsky" }
+name        = "gcp-lfs"
+bucket_name = "gcp-lfs"
+labels      = {"product" : "git_lfs"}
