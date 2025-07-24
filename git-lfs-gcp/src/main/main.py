@@ -3,14 +3,15 @@ import json
 import logging
 import os
 import uuid
-
 import flask
-from google.cloud import storage
 
+from google.cloud import storage
 from core import *
 
 logger = logging.getLogger()
 logger.setLevel(os.getenv('LOG_LEVEL', 'INFO'))
+
+app = flask.Flask(__name__)
 
 __all__ = (
     'GoogleCloudFileStorage',
@@ -95,3 +96,7 @@ def function_handler(req: flask.Request):
     response = process(req)
     logger.info('Response: %s' % json.dumps(response))
     return response
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', '8080')))
